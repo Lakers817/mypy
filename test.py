@@ -2,6 +2,7 @@ from cassandra.cluster import Cluster
 import sys
 import os
 from os import environ
+import unicodedata
 
 ty = os.getenv('cass')
 

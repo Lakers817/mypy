@@ -12,7 +12,7 @@ keyspace = 'northwind'
 
 connection = cluster.connect(keyspace)
 
-first_orders = connection.execute('select * from orders limit 5')
+first_orders = connection.execute('select * from orders limit 7')
 
 for order in first_orders:
     print("Orders %d - To city %s" %(order.ordersid, order.shipcity))

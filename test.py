@@ -16,4 +16,3 @@ first_orders = connection.execute('select * from orders limit 5')
 
 for order in first_orders:
     print("Orders %d - To city %s" %(order.ordersid, order.shipcity))
-

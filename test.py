@@ -7,6 +7,7 @@ import unicodedata
 ty = os.getenv('cass')
 
 print(ty)
+
 cluster = Cluster([ty])
 
 keyspace = 'northwind'

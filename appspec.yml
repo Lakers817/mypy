@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: test.py
+  - source: files/test.py
     destination: /home/ubuntu/
 
 permissions:

@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+
+files:
+  - source: test.py
+    destination: /home/ubuntu/
+
+permissions:
+  - object: /home/ubuntu/
+    pattern: test.py
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - file
+
+hooks:
+  BeforeInstall:
+#    - location: scripts/deregister_from_elb.sh
+    
+  AfterInstall:
+    - location: scripts/start_python.sh

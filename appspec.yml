@@ -2,12 +2,12 @@ version: 0.0
 os: linux
 
 files:
-  - source: files/test.py
+  - source: files/hello.txt
     destination: /home/ubuntu/
 
 permissions:
   - object: /home/ubuntu/
-    pattern: test.py
+    pattern: hello.txt
     owner: ubuntu
     group: ubuntu
     mode: 755
@@ -19,4 +19,4 @@ hooks:
 #    - location: scripts/deregister_from_elb.sh
     
   AfterInstall:
-    - location: scripts/start_python.sh
+#    - location: scripts/start_python.sh

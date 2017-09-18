@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: files/hello.txt
+  - source: files/hello.txt,test.py
     destination: /home/ubuntu/
 
 permissions:

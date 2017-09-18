@@ -7,7 +7,6 @@ files:
 
 permissions:
   - object: /home/ubuntu/
-    pattern: hello.txt
     owner: ubuntu
     group: ubuntu
     mode: 755
@@ -16,7 +15,7 @@ permissions:
 
 hooks:
   BeforeInstall:
-#    - location: scripts/deregister_from_elb.sh
+    - location: scripts/sleep.sh
     
   AfterInstall:
-#    - location: scripts/start_python.sh
+    - location: scripts/start_python.sh

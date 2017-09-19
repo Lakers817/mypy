@@ -3,12 +3,9 @@
 
 cd /home/ubuntu/
 
-noni=$(aws ssm get-parameters --region us-east-1 --names cass --with-decryption --query Parameters[0].Value)
-soni="${noni%\"}"
-soni="${soni#\"}"
-echo $soni
+passy=$(aws ssm get-parameters --region us-east-1 --names cass --with-decryption --query Parameters[0].Value)
+passy=`echo $passy | sed -e 's/^"//' -e 's/"$//'`
 
-export toni=$soni
-sleep 5
+export passy=$passy
 
 python test.py

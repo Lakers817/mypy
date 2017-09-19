@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-sleep 30
+ls -al

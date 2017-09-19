@@ -3,9 +3,10 @@ import sys
 import os
 from os import environ
 
-ty = os.getenv('toni')
+ty = os.getenv('passy')
 
 print(ty)
+
 cluster = Cluster([ty])
 
 keyspace = 'northwind'
@@ -16,3 +17,4 @@ first_orders = connection.execute('select * from orders limit 5')
 
 for order in first_orders:
     print("Orders %d - To city %s" %(order.ordersid, order.shipcity))
+

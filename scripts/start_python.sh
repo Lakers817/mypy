@@ -9,4 +9,6 @@ passy=`echo $passy | sed -e 's/^"//' -e 's/"$//'`
 
 export passy=$passy
 
+# we are getting the output in text.log
+
 python test.py >> text.log
